@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body{
+            height: 100vh;
+            place-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .caja{
+            border-style: double;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="caja">
+        <form name="formu" action="curriculum.html">
+            <div style="padding-bottom: 5px;">
+                <label for="">Usuario: </label>
+                <div><input type="text" name="user"></div>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <label for="">Contraseña: </label>
+                <div><input type="password" name="pass"></div>
+            </div>
+            <div style="display: flex; justify-content: end;">
+                <input onclick="entrar()" type="button" value="Acceder">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function entrar(){
+            if (document.formu.pass.value=='1234' && document.formu.user.value=='ysmael'){ 
+                    document.formu.submit(); 
+                } 
+                else{ 
+                    alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
+                    document.formu.pass.value = "";
+                    document.formu.user.value = "";
+                } 
+            } 
+    </script>
+</body>
+</html>
